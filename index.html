@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Valorant Boost PRO+</title>
+<title>Valorant Rank Boost PRO+</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
@@ -18,10 +18,6 @@ button{background:var(--main);color:#fff;font-size:15px;cursor:pointer}
 table{width:100%;border-collapse:collapse;margin:15px 0}
 th,td{border:1px solid #333;padding:8px;text-align:center}
 .price-big{text-align:center;font-size:22px;color:var(--ok);margin:10px 0}
-.badge{padding:4px 8px;border-radius:6px;font-size:12px}
-.wait{background:#777}
-.doing{background:#ffb300;color:#000}
-.done{background:var(--ok);color:#000}
 .toast{position:fixed;top:20px;right:20px;background:#141e28;
 padding:12px 16px;border-left:6px solid var(--ok);
 border-radius:8px;opacity:0;transition:.3s}
@@ -29,7 +25,11 @@ border-radius:8px;opacity:0;transition:.3s}
 .toggle{position:fixed;bottom:20px;right:20px;background:var(--main);
 color:#fff;padding:12px;border-radius:50%;cursor:pointer}
 .hide{display:none}
-.actions button{width:auto;margin:2px;padding:6px 10px;font-size:13px}
+.badge{padding:4px 8px;border-radius:6px;font-size:12px}
+.wait{background:#777}
+.doing{background:#ffb300;color:#000}
+.done{background:var(--ok);color:#000}
+.actions button{width:auto;padding:5px 8px;font-size:12px}
 .stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
 .stat div{background:#141e28;padding:12px;border-radius:10px;text-align:center}
 </style>
@@ -37,28 +37,28 @@ color:#fff;padding:12px;border-radius:50%;cursor:pointer}
 
 <body>
 
-<div class="toggle" onclick="toggle()">🌓</div>
+<div class="toggle" onclick="toggleTheme()">🌓</div>
 <div class="toast" id="toast"></div>
 
 <!-- ================= KHÁCH ================= -->
 <div class="container" id="customer">
-<h1>🎯 Cày Thuê Valorant</h1>
+<h1>🎯 Valorant Rank Boost</h1>
 
-<h2>Bảng giá</h2>
-<table id="priceTable">
-<tr><th>Rank</th><th>Lên</th><th>Giá</th></tr>
-<tr><td>Sắt</td><td>Sắt 2 / Sắt 3 / Đồng 1</td><td>20k / 20k / 25k</td></tr>
-<tr><td>Đồng</td><td>Đồng 2 / Đồng 3 / Bạc 1</td><td>25k / 25k / 35k</td></tr>
-<tr><td>Bạc</td><td>Bạc 2 / Bạc 3 / Vàng 1</td><td>35k / 35k / 50k</td></tr>
-<tr><td>Vàng</td><td>Vàng 2 / Vàng 3 / BK 1</td><td>50k / 50k / 70k</td></tr>
-<tr><td>Bạch Kim</td><td>BK 2 / BK 3 / KC 1</td><td>70k / 70k / 100k</td></tr>
-<tr><td>Kim Cương</td><td>KC 2 / KC 3 / Asc 1</td><td>100k / 100k / 150k</td></tr>
-<tr><td>Ascendent</td><td>Asc 2 / Asc 3</td><td>150k / 150k</td></tr>
+<h2>Bảng giá (Chuẩn theo ảnh)</h2>
+<table>
+<tr><th>Rank</th><th>Giá / Rank</th></tr>
+<tr><td>Sắt</td><td>20.000 VNĐ</td></tr>
+<tr><td>Đồng</td><td>25.000 VNĐ</td></tr>
+<tr><td>Bạc</td><td>35.000 VNĐ</td></tr>
+<tr><td>Vàng</td><td>50.000 VNĐ</td></tr>
+<tr><td>Bạch Kim</td><td>70.000 VNĐ</td></tr>
+<tr><td>Kim Cương</td><td>100.000 VNĐ</td></tr>
+<tr><td>Ascendent</td><td>150.000 VNĐ</td></tr>
+<tr><td>Immortal / Radiant</td><td>Inbox</td></tr>
 </table>
 
 <h2>Đăng ký dịch vụ</h2>
 <form id="orderForm">
-
 <label>Tên khách</label>
 <input id="name" required>
 
@@ -68,7 +68,7 @@ color:#fff;padding:12px;border-radius:50%;cursor:pointer}
 <label>Rank mong muốn</label>
 <select id="tar"></select>
 
-<label>Liên hệ</label>
+<label>Liên hệ (Zalo / Discord)</label>
 <input id="contact" required>
 
 <label>CAPTCHA: 8 + 1 = ?</label>
@@ -114,8 +114,8 @@ color:#fff;padding:12px;border-radius:50%;cursor:pointer}
 </div>
 
 <script>
-/* ===== DATA ===== */
-const ranks=[
+/* ===== CONFIG ===== */
+const rankSteps = [
 "Sắt 1","Sắt 2","Sắt 3",
 "Đồng 1","Đồng 2","Đồng 3",
 "Bạc 1","Bạc 2","Bạc 3",
@@ -125,50 +125,146 @@ const ranks=[
 "Ascendent 1","Ascendent 2","Ascendent 3"
 ];
 
-const PRICE_STEP={
-0:20000,1:20000,2:25000,
-3:25000,4:25000,5:35000,
-6:35000,7:35000,8:50000,
-9:50000,10:50000,11:70000,
-12:70000,13:70000,14:100000,
-15:100000,16:100000,17:150000,
-18:150000,19:150000
+const PRICE_STEP = {
+0:20000,1:20000,2:20000,
+3:25000,4:25000,5:25000,
+6:35000,7:35000,8:35000,
+9:50000,10:50000,11:50000,
+12:70000,13:70000,14:70000,
+15:100000,16:100000,17:100000,
+18:150000,19:150000,20:150000
 };
 
-const ADMINS={"admin":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"};
-const $=id=>document.getElementById(id);
+const ADMINS = JSON.parse(localStorage.getItem("admins") ||
+'{"admin":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"}');
+
+/* ===== INIT SELECT ===== */
+rankSteps.forEach((r,i)=>{
+cur.innerHTML+=`<option value="${i}">${r}</option>`;
+tar.innerHTML+=`<option value="${i}">${r}</option>`;
+});
+tar.selectedIndex = 1;
 
 /* ===== UI ===== */
-function toggle(){document.body.classList.toggle("light")}
-function show(t){toast.innerText=t;toast.classList.add("show");setTimeout(()=>toast.classList.remove("show"),3000)}
+function toggleTheme(){document.body.classList.toggle("light")}
+function show(msg){
+toast.innerText=msg;
+toast.classList.add("show");
+setTimeout(()=>toast.classList.remove("show"),3000);
+}
 
-/* ===== SELECT ===== */
-ranks.forEach((r,i)=>{
-cur.innerHTML+=`<option value="${i}">${r}</option>`;
-if(i>0) tar.innerHTML+=`<option value="${i}">${r}</option>`;
-});
-
-/* ===== CALC ===== */
+/* ===== TÍNH GIÁ ===== */
 function calc(){
-let c=+cur.value,t=+tar.value,total=0;
+let c=+cur.value,t=+tar.value;
 if(t<=c){price.innerText="0 VNĐ";return}
-for(let i=c;i<t;i++) total+=PRICE_STEP[i]||0;
+let total=0;
+for(let i=c;i<t;i++) total+=PRICE_STEP[i];
 price.innerText=total.toLocaleString("vi-VN")+" VNĐ";
 }
 cur.onchange=calc;tar.onchange=calc;calc();
 
-/* ===== ORDER ===== */
+/* ===== KHÁCH ===== */
 orderForm.onsubmit=e=>{
 e.preventDefault();
 if(cap.value!="9"){show("❌ CAPTCHA sai");return}
-const o=JSON.parse(localStorage.getItem("orders")||"[]");
-o.push({
+const orders=JSON.parse(localStorage.getItem("orders")||"[]");
+orders.push({
 name:name.value,
 contact:contact.value,
-rank:`${ranks[cur.value]} → ${ranks[tar.value]}`,
+rank:`${rankSteps[cur.value]} → ${rankSteps[tar.value]}`,
 price:price.innerText,
 time:new Date().toLocaleString(),
 date:new Date().toDateString(),
 status:"wait"
 });
-local
+localStorage.setItem("orders",JSON.stringify(orders));
+show("✅ Gửi đơn thành công");
+orderForm.reset();calc();
+};
+
+/* ===== ADMIN ===== */
+async function sha256(t){
+const b=new TextEncoder().encode(t);
+const h=await crypto.subtle.digest("SHA-256",b);
+return [...new Uint8Array(h)].map(x=>x.toString(16).padStart(2,"0")).join("");
+}
+
+let fail=0,locked=false;
+
+async function login(){
+if(locked) return;
+if(!ADMINS[user.value] || await sha256(pass.value)!==ADMINS[user.value]){
+fail++;show("❌ Sai đăng nhập");
+if(fail>=5){locked=true;lock.innerText="🔒 Bị khóa";}
+return;
+}
+sessionStorage.setItem("admin","1");render();
+}
+
+function logout(){sessionStorage.removeItem("admin");location.reload();}
+
+function render(){
+if(!sessionStorage.getItem("admin"))return;
+loginBox.classList.add("hide");panel.classList.remove("hide");
+const data=JSON.parse(localStorage.getItem("orders")||"[]");
+list.innerHTML="";
+let sum=0,today=0;
+data.forEach((o,i)=>{
+sum+=parseInt(o.price.replace(/\D/g,""));
+if(o.date===new Date().toDateString()) today++;
+list.innerHTML+=`
+<tr>
+<td>${o.name}</td>
+<td>${o.contact}</td>
+<td>${o.rank}</td>
+<td>${o.price}</td>
+<td>${o.time}</td>
+<td><span class="badge ${o.status}">${o.status}</span></td>
+<td class="actions">
+<button onclick="setStatus(${i},'doing')">▶</button>
+<button onclick="setStatus(${i},'done')">✔</button>
+<button onclick="del(${i})" style="background:#ff4655">✖</button>
+</td>
+</tr>`;
+});
+sTotal.innerText=data.length;
+sMoney.innerText=sum.toLocaleString("vi-VN")+" VNĐ";
+sToday.innerText=today;
+}
+
+function setStatus(i,s){
+const d=JSON.parse(localStorage.getItem("orders"));
+d[i].status=s;
+localStorage.setItem("orders",JSON.stringify(d));
+render();
+}
+function del(i){
+const d=JSON.parse(localStorage.getItem("orders"));
+d.splice(i,1);
+localStorage.setItem("orders",JSON.stringify(d));
+render();
+}
+function clearAll(){
+if(confirm("Xóa tất cả đơn?")){
+localStorage.removeItem("orders");render();
+}
+}
+function exportCSV(){
+const d=JSON.parse(localStorage.getItem("orders")||"[]");
+let csv="Tên,Liên hệ,Rank,Giá,Thời gian,Trạng thái\n";
+d.forEach(o=>csv+=`${o.name},${o.contact},${o.rank},${o.price},${o.time},${o.status}\n`);
+const a=document.createElement("a");
+a.href=URL.createObjectURL(new Blob([csv]));
+a.download="orders.csv";a.click();
+}
+
+/* ===== ROUTE ===== */
+if(location.hash==="#admin"){
+customer.classList.add("hide");
+admin.classList.remove("hide");
+render();
+}
+</script>
+
+</body>
+</html>
