@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Cày Thuê Valorant Uy Tín</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- FAVICON -->
+<link rel="icon" href="data:image/svg+xml,
+<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+<text y='0.9em' font-size='90'>🎯</text>
+</svg>">
+
+<style>
+*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{margin:0;background:#0f1923;color:#fff}
+
+/* HEADER */
+header{
+    background:linear-gradient(135deg,#ff4655,#ff7b7b);
+    padding:35px 20px;text-align:center
+}
+.logo{font-size:48px}
+header h1{margin:10px 0 0;font-size:34px}
+header p{margin-top:8px;opacity:.9}
+
+/* CONTAINER */
+.container{
+    max-width:650px;margin:30px auto;background:#1f2a37;
+    padding:30px;border-radius:14px;
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+/* TITLES */
+h2{text-align:center;color:#ff4655;margin-bottom:15px}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;margin-bottom:25px;font-size:14px}
+th,td{border:1px solid #2f3b4a;padding:10px;text-align:center}
+th{background:#141e28;color:#ff4655}
+tr:hover{background:#141e28}
+
+/* FORM */
+label{margin-top:15px;display:block;font-weight:bold}
+input,select{
+    width:100%;padding:12px;margin-top:6px;
+    border-radius:8px;border:none;outline:none
+}
+
+/* PRICE */
+.price-box{
+    margin:20px 0;background:#0f1923;
+    padding:15px;border-radius:10px;text-align:center
+}
+.price-box span{color:#00ff99;font-size:20px;font-weight:bold}
+
+/* SUMMARY */
+.summary{
+    background:#141e28;padding:15px;border-radius:10px;
+    font-size:14px;margin-bottom:15px
+}
+
+/* BUTTON */
+button{
+    width:100%;padding:14px;background:#ff4655;border:none;
+    color:#fff;font-size:16px;border-radius:8px;cursor:pointer
+}
+button:hover{opacity:.85}
+
+/* CONTACT */
+.contact{display:flex;gap:10px;margin-top:20px}
+.contact a{
+    flex:1;padding:12px;text-align:center;color:#fff;
+    text-decoration:none;border-radius:8px;font-weight:bold
+}
+.zalo{background:#0068ff}
+.discord{background:#5865f2}
+
+/* FOOTER */
+footer{margin:40px 0 20px;text-align:center;font-size:13px;color:#aaa}
+
+/* ===== LOADING OVERLAY ===== */
+.loading{
+    position:fixed;inset:0;display:none;
+    background:rgba(15,25,35,.85);
+    align-items:center;justify-content:center;z-index:999
+}
+.loading.active{display:flex}
+.spinner{
+    width:70px;height:70px;border-radius:50%;
+    border:6px solid #2f3b4a;border-top-color:#ff4655;
+    animation:spin 1s linear infinite
+}
+@keyframes spin{to{transform:rotate(360deg)}}
+.loading p{margin-top:15px;text-align:center}
+
+/* ===== TOAST ===== */
+.toast{
+    position:fixed;right:20px;top:20px;z-index:1000;
+    min-width:260px;padding:14px 16px;border-radius:10px;
+    background:#141e28;color:#fff;opacity:0;
+    transform:translateY(-10px);transition:.3s
+}
+.toast.show{opacity:1;transform:translateY(0)}
+.toast.success{border-left:6px solid #00ff99}
+.toast.error{border-left:6px solid #ff4655}
+
+@media(max-width:500px){
+    header h1{font-size:26px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🎯</div>
+    <h1>Cày Thuê Valorant</h1>
+    <p>Leo rank nhanh • An toàn • Bảo mật</p>
+</header>
+
+<div class="container">
+<h2>Bảng Giá Chi Tiết</h2>
+<table>
+<tr><th>Từ Rank</th><th>Đến Rank</th><th>Giá</th></tr>
+<tr><td>Sắt</td><td>Đồng</td><td>150.000 VNĐ</td></tr>
+<tr><td>Đồng</td><td>Bạc</td><td>150.000 VNĐ</td></tr>
+<tr><td>Bạc</td><td>Vàng</td><td>150.000 VNĐ</td></tr>
+<tr><td>Vàng</td><td>Bạch Kim</td><td>150.000 VNĐ</td></tr>
+<tr><td>Bạch Kim</td><td>Kim Cương</td><td>150.000 VNĐ</td></tr>
+</table>
+
+<h2>Đăng Ký Dịch Vụ</h2>
+<form id="boostForm">
+<label>Tên khách hàng</label>
+<input id="name" required placeholder="Nhập tên của bạn">
+
+<label>Rank hiện tại</label>
+<select id="currentRank">
+    <option value="0">Sắt</option>
+    <option value="1">Đồng</option>
+    <option value="2">Bạc</option>
+    <option value="3">Vàng</option>
+    <option value="4">Bạch Kim</option>
+</select>
+
+<label>Rank mong muốn</label>
+<select id="targetRank">
+    <option value="1">Đồng</option>
+    <option value="2">Bạc</option>
+    <option value="3">Vàng</option>
+    <option value="4">Bạch Kim</option>
+    <option value="5">Kim Cương</option>
+</select>
+
+<label>Liên hệ (Zalo / Discord)</label>
+<input id="contact" required placeholder="Zalo / Discord">
+
+<div class="price-box">Giá dự kiến: <span id="price">0 VNĐ</span></div>
+<div class="summary" id="summary">Chưa có thông tin đơn hàng</div>
+
+<button type="submit">Gửi Đơn Ngay</button>
+</form>
+
+<div class="contact">
+    <a href="https://zalo.me/" target="_blank" class="zalo">ZALO</a>
+    <a href="https://discord.com/" target="_blank" class="discord">DISCORD</a>
+</div>
+</div>
+
+<footer>Website demo học tập – Valorant thuộc Riot Games</footer>
+
+<!-- LOADING -->
+<div class="loading" id="loading">
+    <div>
+        <div class="spinner"></div>
+        <p>Đang gửi đơn...</p>
+    </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+const currentRank=document.getElementById("currentRank");
+const targetRank=document.getElementById("targetRank");
+const priceText=document.getElementById("price");
+const summary=document.getElementById("summary");
+const form=document.getElementById("boostForm");
+const loading=document.getElementById("loading");
+const toast=document.getElementById("toast");
+
+const rankName=["Sắt","Đồng","Bạc","Vàng","Bạch Kim","Kim Cương"];
+const pricePerRank=150000;
+
+function calc(){
+    const c=parseInt(currentRank.value), t=parseInt(targetRank.value);
+    if(t<=c){
+        priceText.innerText="0 VNĐ";
+        summary.innerText="Vui lòng chọn rank hợp lệ";
+        return;
+    }
+    const total=(t-c)*pricePerRank;
+    priceText.innerText=total.toLocaleString("vi-VN")+" VNĐ";
+    summary.innerHTML=`Từ <b>${rankName[c]}</b> → <b>${rankName[t]}</b><br>
+    Số bậc: ${t-c}<br>
+    Tổng tiền: <b style="color:#00ff99">${total.toLocaleString("vi-VN")} VNĐ</b>`;
+}
+currentRank.onchange=calc; targetRank.onchange=calc;
+
+function showToast(type,text){
+    toast.className=`toast show ${type}`;
+    toast.innerText=text;
+    setTimeout(()=>toast.className="toast",3000);
+}
+
+form.onsubmit=function(e){
+    e.preventDefault();
+    loading.classList.add("active");
+    setTimeout(()=>{
+        loading.classList.remove("active");
+        showToast("success","✅ Gửi đơn thành công! Chúng tôi sẽ liên hệ sớm.");
+        form.reset();
+        priceText.innerText="0 VNĐ";
+        summary.innerText="Chưa có thông tin đơn hàng";
+    },1500);
+};
+</script>
+
+</body>
+</html>
