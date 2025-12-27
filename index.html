@@ -2,229 +2,314 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Cày Thuê Valorant Uy Tín</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<!-- FAVICON -->
-<link rel="icon" href="data:image/svg+xml,
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-<text y='0.9em' font-size='90'>🎯</text>
-</svg>">
+<title>Valorant Boost PRO+</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-*{box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{margin:0;background:#0f1923;color:#fff}
-
-/* HEADER */
-header{
-    background:linear-gradient(135deg,#ff4655,#ff7b7b);
-    padding:35px 20px;text-align:center
-}
-.logo{font-size:48px}
-header h1{margin:10px 0 0;font-size:34px}
-header p{margin-top:8px;opacity:.9}
-
-/* CONTAINER */
-.container{
-    max-width:650px;margin:30px auto;background:#1f2a37;
-    padding:30px;border-radius:14px;
-    box-shadow:0 10px 30px rgba(0,0,0,.4);
-}
-
-/* TITLES */
-h2{text-align:center;color:#ff4655;margin-bottom:15px}
-
-/* TABLE */
-table{width:100%;border-collapse:collapse;margin-bottom:25px;font-size:14px}
-th,td{border:1px solid #2f3b4a;padding:10px;text-align:center}
-th{background:#141e28;color:#ff4655}
-tr:hover{background:#141e28}
-
-/* FORM */
-label{margin-top:15px;display:block;font-weight:bold}
-input,select{
-    width:100%;padding:12px;margin-top:6px;
-    border-radius:8px;border:none;outline:none
-}
-
-/* PRICE */
-.price-box{
-    margin:20px 0;background:#0f1923;
-    padding:15px;border-radius:10px;text-align:center
-}
-.price-box span{color:#00ff99;font-size:20px;font-weight:bold}
-
-/* SUMMARY */
-.summary{
-    background:#141e28;padding:15px;border-radius:10px;
-    font-size:14px;margin-bottom:15px
-}
-
-/* BUTTON */
-button{
-    width:100%;padding:14px;background:#ff4655;border:none;
-    color:#fff;font-size:16px;border-radius:8px;cursor:pointer
-}
-button:hover{opacity:.85}
-
-/* CONTACT */
-.contact{display:flex;gap:10px;margin-top:20px}
-.contact a{
-    flex:1;padding:12px;text-align:center;color:#fff;
-    text-decoration:none;border-radius:8px;font-weight:bold
-}
-.zalo{background:#0068ff}
-.discord{background:#5865f2}
-
-/* FOOTER */
-footer{margin:40px 0 20px;text-align:center;font-size:13px;color:#aaa}
-
-/* ===== LOADING OVERLAY ===== */
-.loading{
-    position:fixed;inset:0;display:none;
-    background:rgba(15,25,35,.85);
-    align-items:center;justify-content:center;z-index:999
-}
-.loading.active{display:flex}
-.spinner{
-    width:70px;height:70px;border-radius:50%;
-    border:6px solid #2f3b4a;border-top-color:#ff4655;
-    animation:spin 1s linear infinite
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-.loading p{margin-top:15px;text-align:center}
-
-/* ===== TOAST ===== */
-.toast{
-    position:fixed;right:20px;top:20px;z-index:1000;
-    min-width:260px;padding:14px 16px;border-radius:10px;
-    background:#141e28;color:#fff;opacity:0;
-    transform:translateY(-10px);transition:.3s
-}
-.toast.show{opacity:1;transform:translateY(0)}
-.toast.success{border-left:6px solid #00ff99}
-.toast.error{border-left:6px solid #ff4655}
-
-@media(max-width:500px){
-    header h1{font-size:26px}
-}
+:root{--bg:#0f1923;--card:#1f2a37;--main:#ff4655;--text:#fff;--ok:#00ff99}
+.light{--bg:#f3f4f6;--card:#fff;--text:#111}
+*{box-sizing:border-box;font-family:Arial}
+body{margin:0;background:var(--bg);color:var(--text);transition:.3s}
+.container{max-width:1100px;margin:25px auto;background:var(--card);padding:25px;border-radius:14px}
+h1,h2,h3{text-align:center;color:var(--main)}
+label{display:block;margin-top:12px}
+input,select,button{width:100%;padding:12px;margin-top:6px;border-radius:8px;border:none}
+button{background:var(--main);color:#fff;font-size:15px;cursor:pointer}
+table{width:100%;border-collapse:collapse;margin:15px 0}
+th,td{border:1px solid #333;padding:8px;text-align:center}
+.price-big{text-align:center;font-size:22px;color:var(--ok);margin:10px 0}
+.badge{padding:4px 8px;border-radius:6px;font-size:12px}
+.wait{background:#777}
+.doing{background:#ffb300;color:#000}
+.done{background:var(--ok);color:#000}
+.toast{position:fixed;top:20px;right:20px;background:#141e28;
+padding:12px 16px;border-left:6px solid var(--ok);
+border-radius:8px;opacity:0;transition:.3s}
+.toast.show{opacity:1}
+.toggle{position:fixed;bottom:20px;right:20px;background:var(--main);
+color:#fff;padding:12px;border-radius:50%;cursor:pointer}
+.hide{display:none}
+.actions button{width:auto;margin:2px;padding:6px 10px;font-size:13px}
+.stat{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.stat div{background:#141e28;padding:12px;border-radius:10px;text-align:center}
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">🎯</div>
-    <h1>Cày Thuê Valorant</h1>
-    <p>Leo rank nhanh • An toàn • Bảo mật</p>
-</header>
+<div class="toggle" onclick="toggle()">🌓</div>
+<div class="toast" id="toast"></div>
 
-<div class="container">
-<h2>Bảng Giá Chi Tiết</h2>
-<table>
-<tr><th>Từ Rank</th><th>Đến Rank</th><th>Giá</th></tr>
-<tr><td>Sắt</td><td>Đồng</td><td>150.000 VNĐ</td></tr>
-<tr><td>Đồng</td><td>Bạc</td><td>150.000 VNĐ</td></tr>
-<tr><td>Bạc</td><td>Vàng</td><td>150.000 VNĐ</td></tr>
-<tr><td>Vàng</td><td>Bạch Kim</td><td>150.000 VNĐ</td></tr>
-<tr><td>Bạch Kim</td><td>Kim Cương</td><td>150.000 VNĐ</td></tr>
+<!-- ================= KHÁCH ================= -->
+<div class="container" id="customer">
+<h1>🎯 Cày Thuê Valorant</h1>
+
+<h2>Bảng giá</h2>
+<table id="priceTable">
+<tr><th>Từ rank</th><th>Đến rank</th><th>Giá</th></tr>
 </table>
 
-<h2>Đăng Ký Dịch Vụ</h2>
-<form id="boostForm">
-<label>Tên khách hàng</label>
-<input id="name" required placeholder="Nhập tên của bạn">
+<h2>Đăng ký dịch vụ</h2>
+<form id="orderForm">
+
+<label>Tên khách</label>
+<input id="name" required>
 
 <label>Rank hiện tại</label>
-<select id="currentRank">
-    <option value="0">Sắt</option>
-    <option value="1">Đồng</option>
-    <option value="2">Bạc</option>
-    <option value="3">Vàng</option>
-    <option value="4">Bạch Kim</option>
+<select id="cur">
+<option value="0">Sắt 1</option>
+<option value="1">Sắt 2</option>
+<option value="2">Sắt 3</option>
+<option value="3">Đồng 1</option>
+<option value="4">Đồng 2</option>
+<option value="5">Đồng 3</option>
+<option value="6">Bạc 1</option>
+<option value="7">Bạc 2</option>
+<option value="8">Bạc 3</option>
+<option value="5">Vàng 1</option>
+<option value="10">Vàng 2</option>
+<option value="11">Vàng 3</option>
+<option value="12">Bạch Kim 1</option>
+<option value="13">Bạch Kim 2</option>
+<option value="14">Bạch Kim 3</option>
+<option value="15">Kim Cương 1</option>
+<option value="16">Kim Cương 2</option>
+<option value="17">Kim Cương 3</option>
+<option value="18">Ascendent 1</option>
+<option value="19">Ascendent 2</option>
+<option value="20">Ascendent 3</option>
+    
 </select>
 
 <label>Rank mong muốn</label>
-<select id="targetRank">
-    <option value="1">Đồng</option>
-    <option value="2">Bạc</option>
-    <option value="3">Vàng</option>
-    <option value="4">Bạch Kim</option>
-    <option value="5">Kim Cương</option>
+<select id="tar">
+<option value="1">Đồng 2</option>
+<option value="1">Đồng 3</option>
+<option value="1">Bạc 1</option>
+<option value="2">Bạc 2</option>
+<option value="2">Bạc 3</option>
+<option value="2">Vàng 1</option>
+<option value="3">Vàng 2</option>
+<option value="3">Vàng 3</option>
+<option value="3">Bạch Kim 1</option>
+<option value="4">Bạch Kim 2</option>
+<option value="4">Bạch Kim 3</option>
+<option value="4">Kim Cương 1</option>
+<option value="5">Kim Cương 2</option>
+<option value="5">Kim Cương 3</option>
+<option value="5">Ascedent 1</option>
+<option value="6">Ascendent 2</option>
+<option value="6">Ascendent 3</option>
 </select>
 
-<label>Liên hệ (Zalo / Discord)</label>
-<input id="contact" required placeholder="Zalo / Discord">
+<label>Liên hệ</label>
+<input id="contact" required>
 
-<div class="price-box">Giá dự kiến: <span id="price">0 VNĐ</span></div>
-<div class="summary" id="summary">Chưa có thông tin đơn hàng</div>
+<label>CAPTCHA: 8 + 1 = ?</label>
+<input id="cap" required>
 
-<button type="submit">Gửi Đơn Ngay</button>
+<div class="price-big" id="price">0 VNĐ</div>
+<button>Gửi đơn</button>
 </form>
-
-<div class="contact">
-    <a href="https://zalo.me/" target="_blank" class="zalo">ZALO</a>
-    <a href="https://discord.com/" target="_blank" class="discord">DISCORD</a>
-</div>
 </div>
 
-<footer>Website demo học tập – Valorant thuộc Riot Games</footer>
+<!-- ================= ADMIN ================= -->
+<div class="container hide" id="admin">
+<h2>🛠 ADMIN PRO+</h2>
 
-<!-- LOADING -->
-<div class="loading" id="loading">
-    <div>
-        <div class="spinner"></div>
-        <p>Đang gửi đơn...</p>
-    </div>
+<div id="loginBox">
+<input id="user" placeholder="Username">
+<input id="pass" type="password" placeholder="Password">
+<button onclick="login()">Đăng nhập</button>
+<p id="lock" style="color:#ff4655"></p>
 </div>
 
-<!-- TOAST -->
-<div class="toast" id="toast"></div>
+<div id="panel" class="hide">
+
+<div class="stat">
+<div>📦 Tổng đơn<br><b id="sTotal">0</b></div>
+<div>💰 Doanh thu<br><b id="sMoney">0</b></div>
+<div>📅 Hôm nay<br><b id="sToday">0</b></div>
+</div>
+
+<h3>Danh sách đơn</h3>
+<button onclick="exportCSV()">⬇ Xuất CSV</button>
+<button onclick="clearAll()" style="background:#444">🗑 Xóa tất cả</button>
+
+<table>
+<tr>
+<th>Tên</th><th>Liên hệ</th><th>Rank</th>
+<th>Giá</th><th>Thời gian</th><th>Trạng thái</th><th>Hành động</th>
+</tr>
+<tbody id="list"></tbody>
+</table>
+
+<h3>Đổi mật khẩu admin</h3>
+<input id="newPass" type="password" placeholder="Mật khẩu mới">
+<button onclick="changePass()">Đổi</button>
+
+<button onclick="logout()">Đăng xuất</button>
+</div>
+</div>
 
 <script>
-const currentRank=document.getElementById("currentRank");
-const targetRank=document.getElementById("targetRank");
-const priceText=document.getElementById("price");
-const summary=document.getElementById("summary");
-const form=document.getElementById("boostForm");
-const loading=document.getElementById("loading");
-const toast=document.getElementById("toast");
+/* ===== CONFIG ===== */
+const pricePer = 150000;
+const rank = ["Sắt","Đồng","Bạc","Vàng","Bạch Kim","Kim Cương"];
+const ADMINS = JSON.parse(localStorage.getItem("admins") || 
+'{"admin":"8d969eef6ecad3c29a3a629280e686cf0c3f5d5a86aff3ca12020c923adc6c92"}');
 
-const rankName=["Sắt","Đồng","Bạc","Vàng","Bạch Kim","Kim Cương"];
-const pricePerRank=150000;
+let fail = 0, locked = false;
+const $ = id => document.getElementById(id);
 
+/* ===== UI ===== */
+function show(msg){
+toast.innerText = msg;
+toast.classList.add("show");
+setTimeout(()=>toast.classList.remove("show"),3000);
+}
+function toggle(){document.body.classList.toggle("light");}
+
+/* ===== BẢNG GIÁ ===== */
+const priceTable = $("priceTable");
+for(let i=0;i<rank.length-1;i++){
+priceTable.innerHTML += `
+<tr>
+<td>${rank[i]}</td>
+<td>${rank[i+1]}</td>
+<td>${pricePer.toLocaleString("vi-VN")} VNĐ</td>
+</tr>`;
+}
+
+/* ===== TÍNH GIÁ ===== */
 function calc(){
-    const c=parseInt(currentRank.value), t=parseInt(targetRank.value);
-    if(t<=c){
-        priceText.innerText="0 VNĐ";
-        summary.innerText="Vui lòng chọn rank hợp lệ";
-        return;
-    }
-    const total=(t-c)*pricePerRank;
-    priceText.innerText=total.toLocaleString("vi-VN")+" VNĐ";
-    summary.innerHTML=`Từ <b>${rankName[c]}</b> → <b>${rankName[t]}</b><br>
-    Số bậc: ${t-c}<br>
-    Tổng tiền: <b style="color:#00ff99">${total.toLocaleString("vi-VN")} VNĐ</b>`;
+let c = +cur.value, t = +tar.value;
+price.innerText = t>c ? ((t-c)*pricePer).toLocaleString("vi-VN")+" VNĐ" : "0 VNĐ";
 }
-currentRank.onchange=calc; targetRank.onchange=calc;
+cur.onchange = calc;
+tar.onchange = calc;
+calc();
 
-function showToast(type,text){
-    toast.className=`toast show ${type}`;
-    toast.innerText=text;
-    setTimeout(()=>toast.className="toast",3000);
-}
+/* ===== KHÁCH GỬI ĐƠN ===== */
+orderForm.onsubmit = e => {
+e.preventDefault();
+if(cap.value!="9"){show("❌ CAPTCHA sai");return}
 
-form.onsubmit=function(e){
-    e.preventDefault();
-    loading.classList.add("active");
-    setTimeout(()=>{
-        loading.classList.remove("active");
-        showToast("success","✅ Gửi đơn thành công! Chúng tôi sẽ liên hệ sớm.");
-        form.reset();
-        priceText.innerText="0 VNĐ";
-        summary.innerText="Chưa có thông tin đơn hàng";
-    },1500);
+const orders = JSON.parse(localStorage.getItem("orders")||"[]");
+orders.push({
+name:name.value,
+contact:contact.value,
+rank:`${rank[cur.value]} → ${rank[tar.value]}`,
+price:price.innerText,
+time:new Date().toLocaleString(),
+date:new Date().toDateString(),
+status:"wait"
+});
+localStorage.setItem("orders",JSON.stringify(orders));
+show("✅ Gửi đơn thành công");
+orderForm.reset();calc();
 };
+
+/* ===== ADMIN ===== */
+async function sha256(t){
+const b=new TextEncoder().encode(t);
+const h=await crypto.subtle.digest("SHA-256",b);
+return [...new Uint8Array(h)].map(x=>x.toString(16).padStart(2,"0")).join("");
+}
+
+async function login(){
+if(locked) return;
+if(!ADMINS[user.value]){fail++;failCheck();return}
+if(await sha256(pass.value)!==ADMINS[user.value]){fail++;failCheck();return}
+sessionStorage.setItem("admin","1");
+render();
+}
+
+function failCheck(){
+show("❌ Sai thông tin");
+if(fail>=5){locked=true;lock.innerText="🔒 Bị khóa đăng nhập";}
+}
+
+function logout(){sessionStorage.removeItem("admin");location.reload();}
+
+function render(){
+if(!sessionStorage.getItem("admin"))return;
+loginBox.classList.add("hide");
+panel.classList.remove("hide");
+
+const data=JSON.parse(localStorage.getItem("orders")||"[]");
+list.innerHTML="";
+let sum=0,today=0;
+
+data.forEach((o,i)=>{
+sum+=parseInt(o.price.replace(/\D/g,""));
+if(o.date===new Date().toDateString()) today++;
+list.innerHTML+=`
+<tr>
+<td>${o.name}</td>
+<td>${o.contact}</td>
+<td>${o.rank}</td>
+<td>${o.price}</td>
+<td>${o.time}</td>
+<td><span class="badge ${o.status}">${o.status}</span></td>
+<td class="actions">
+<button onclick="setStatus(${i},'doing')">▶</button>
+<button onclick="setStatus(${i},'done')">✔</button>
+<button onclick="del(${i})" style="background:#ff4655">✖</button>
+</td>
+</tr>`;
+});
+sTotal.innerText=data.length;
+sMoney.innerText=sum.toLocaleString("vi-VN")+" VNĐ";
+sToday.innerText=today;
+}
+
+function setStatus(i,s){
+const d=JSON.parse(localStorage.getItem("orders"));
+d[i].status=s;
+localStorage.setItem("orders",JSON.stringify(d));
+render();
+}
+
+function del(i){
+const d=JSON.parse(localStorage.getItem("orders"));
+d.splice(i,1);
+localStorage.setItem("orders",JSON.stringify(d));
+render();
+}
+
+function clearAll(){
+if(confirm("Xóa tất cả đơn?")){
+localStorage.removeItem("orders");render();
+}
+}
+
+async function changePass(){
+if(!newPass.value) return;
+ADMINS["admin"]=await sha256(newPass.value);
+localStorage.setItem("admins",JSON.stringify(ADMINS));
+show("🔑 Đã đổi mật khẩu");
+newPass.value="";
+}
+
+function exportCSV(){
+const data=JSON.parse(localStorage.getItem("orders")||"[]");
+let csv="Tên,Liên hệ,Rank,Giá,Thời gian,Trạng thái\n";
+data.forEach(o=>{
+csv+=`${o.name},${o.contact},${o.rank},${o.price},${o.time},${o.status}\n`;
+});
+const a=document.createElement("a");
+a.href=URL.createObjectURL(new Blob([csv]));
+a.download="orders.csv";
+a.click();
+}
+
+/* ===== ROUTE ADMIN ===== */
+if(location.hash==="#admin"){
+customer.classList.add("hide");
+admin.classList.remove("hide");
+render();
+}
 </script>
 
 </body>
