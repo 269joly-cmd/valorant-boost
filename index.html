@@ -2,263 +2,131 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<title>Cày Thuê Valorant Uy Tín</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="icon" href="data:image/svg+xml,
-<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
-<text y='0.9em' font-size='90'>🎯</text>
-</svg>">
+<title>Bảng Giá Valorant Rank Boost</title>
 
 <style>
-*{box-sizing:border-box;font-family:Arial}
-body{margin:0;background:#0f1923;color:#fff}
-
-/* HEADER */
-header{
-  background:linear-gradient(135deg,#ff4655,#ff7b7b);
-  padding:35px 20px;
-  text-align:center
-}
-.logo{font-size:48px}
-header h1{margin:10px 0 0;font-size:34px}
-header p{opacity:.9}
-
-/* CONTAINER */
-.container{
-  max-width:650px;
-  margin:30px auto;
-  background:#1f2a37;
-  padding:30px;
-  border-radius:14px;
-  box-shadow:0 10px 30px rgba(0,0,0,.4)
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #12001f, #1a0033, #0a0015);
+  font-family: Arial, sans-serif;
+  color: white;
 }
 
-h2{text-align:center;color:#ff4655}
-
-/* PRICE TABLE */
-.price-table{margin:20px 0}
-.price-table div{
-  background:linear-gradient(135deg,#ffb3ec,#ffc8f1);
-  color:#000;
-  padding:14px 18px;
-  border-radius:30px;
-  margin-bottom:10px;
-  font-weight:bold;
-  display:flex;
-  justify-content:space-between
+/* KHUNG CHÍNH */
+.pricing-box {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #0f0f1a;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(180, 100, 255, 0.4);
 }
 
-/* FORM */
-label{display:block;margin-top:15px;font-weight:bold}
-input,select{
-  width:100%;
-  padding:12px;
-  margin-top:6px;
-  border-radius:8px;
-  border:none;
-  outline:none
+.pricing-box h1 {
+  text-align: center;
+  color: #ff9dfd;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
 }
 
-/* PRICE BOX */
-.price-box{
-  background:#0f1923;
-  padding:15px;
-  border-radius:10px;
-  margin:20px 0;
-  text-align:center
-}
-.price-box span{color:#00ff99;font-size:20px;font-weight:bold}
-
-/* SUMMARY */
-.summary{
-  background:#141e28;
-  padding:15px;
-  border-radius:10px;
-  font-size:14px
+/* MỖI DÒNG GIÁ */
+.price-row {
+  display: grid;
+  grid-template-columns: 70px 1.5fr 1.5fr 1fr;
+  align-items: center;
+  background: #1a1a2e;
+  margin-bottom: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  transition: 0.3s;
 }
 
-/* BUTTON */
-button{
-  width:100%;
-  padding:14px;
-  background:#ff4655;
-  border:none;
-  color:#fff;
-  font-size:16px;
-  border-radius:8px;
-  cursor:pointer
+.price-row:hover {
+  background: #23234a;
+  transform: scale(1.02);
 }
-button:hover{opacity:.85}
 
-/* CONTACT */
-.contact{display:flex;gap:10px;margin-top:20px}
-.contact a{
-  flex:1;
-  padding:12px;
-  text-align:center;
-  color:#fff;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold
+/* ICON RANK */
+.rank-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff7ad9, #a855f7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  box-shadow: 0 0 12px rgba(255, 122, 217, 0.6);
 }
-.zalo{background:#0068ff}
-.discord{background:#5865f2}
 
-/* LOADING */
-.loading{
-  position:fixed;
-  inset:0;
-  background:rgba(15,25,35,.85);
-  display:none;
-  align-items:center;
-  justify-content:center;
-  z-index:999
+/* TEXT */
+.rank-name {
+  font-weight: bold;
 }
-.loading.active{display:flex}
-.spinner{
-  width:60px;height:60px;
-  border:6px solid #2f3b4a;
-  border-top-color:#ff4655;
-  border-radius:50%;
-  animation:spin 1s linear infinite
-}
-@keyframes spin{to{transform:rotate(360deg)}}
 
-/* TOAST */
-.toast{
-  position:fixed;
-  top:20px;right:20px;
-  background:#141e28;
-  padding:14px 18px;
-  border-radius:10px;
-  opacity:0;
-  transition:.3s
+.price {
+  color: #9cffc7;
+  font-weight: bold;
 }
-.toast.show{opacity:1}
-.toast.success{border-left:6px solid #00ff99}
 
-footer{text-align:center;color:#aaa;margin:30px 0;font-size:13px}
+/* NÚT */
+button {
+  background: linear-gradient(135deg, #ff7ad9, #a855f7);
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+}
+
+button:hover {
+  opacity: 0.85;
+}
 </style>
 </head>
 
 <body>
 
-<header>
-  <div class="logo">🎯</div>
-  <h1>Cày Thuê Valorant</h1>
-  <p>Leo rank nhanh • An toàn • Bảo mật</p>
-</header>
+<div class="pricing-box">
+  <h1>VALORANT RANK BOOST</h1>
 
-<div class="container">
+  <div class="price-row">
+    <div class="rank-icon">IR</div>
+    <div class="rank-name">Iron → Bronze</div>
+    <div class="price">20.000đ / Rank</div>
+    <button>Đặt ngay</button>
+  </div>
 
-<h2>Bảng Giá Valorant</h2>
-<div class="price-table">
-  <div>Sắt <span>20.000 / rank</span></div>
-  <div>Đồng <span>25.000 / rank</span></div>
-  <div>Bạc <span>35.000 / rank</span></div>
-  <div>Vàng <span>50.000 / rank</span></div>
-  <div>Bạch Kim <span>70.000 / rank</span></div>
-  <div>Kim Cương <span>100.000 / rank</span></div>
-  <div>Ascendant <span>150.000 / rank</span></div>
-</div>
+  <div class="price-row">
+    <div class="rank-icon">BR</div>
+    <div class="rank-name">Bronze → Silver</div>
+    <div class="price">30.000đ / Rank</div>
+    <button>Đặt ngay</button>
+  </div>
 
-<h2>Đăng Ký Dịch Vụ</h2>
-<form id="boostForm">
+  <div class="price-row">
+    <div class="rank-icon">SI</div>
+    <div class="rank-name">Silver → Gold</div>
+    <div class="price">45.000đ / Rank</div>
+    <button>Đặt ngay</button>
+  </div>
 
-<label>Tên khách hàng</label>
-<input required>
+  <div class="price-row">
+    <div class="rank-icon">GO</div>
+    <div class="rank-name">Gold → Platinum</div>
+    <div class="price">70.000đ / Rank</div>
+    <button>Đặt ngay</button>
+  </div>
 
-<label>Rank hiện tại</label>
-<select id="currentRank">
-  <option value="0">Sắt</option>
-  <option value="1">Đồng</option>
-  <option value="2">Bạc</option>
-  <option value="3">Vàng</option>
-  <option value="4">Bạch Kim</option>
-  <option value="5">Kim Cương</option>
-  <option value="6">Ascendant</option>
-</select>
-
-<label>Rank mong muốn</label>
-<select id="targetRank">
-  <option value="1">Đồng</option>
-  <option value="2">Bạc</option>
-  <option value="3">Vàng</option>
-  <option value="4">Bạch Kim</option>
-  <option value="5">Kim Cương</option>
-  <option value="6">Ascendant</option>
-</select>
-
-<label>Liên hệ</label>
-<input required placeholder="Zalo / Discord">
-
-<div class="price-box">
-  Giá dự kiến: <span id="price">0 VNĐ</span>
-</div>
-
-<div class="summary" id="summary">Chưa có thông tin đơn hàng</div>
-
-<button>Gửi đơn ngay</button>
-</form>
-
-<div class="contact">
-  <a class="zalo" href="#">ZALO</a>
-  <a class="discord" href="#">DISCORD</a>
-</div>
+  <div class="price-row">
+    <div class="rank-icon">PL</div>
+    <div class="rank-name">Platinum → Diamond</div>
+    <div class="price">120.000đ / Rank</div>
+    <button>Đặt ngay</button>
+  </div>
 
 </div>
-
-<footer>Demo học tập – Valorant © Riot Games</footer>
-
-<div class="loading" id="loading">
-  <div class="spinner"></div>
-</div>
-
-<div class="toast" id="toast">Gửi đơn thành công!</div>
-
-<script>
-const currentRank = document.getElementById("currentRank");
-const targetRank  = document.getElementById("targetRank");
-const priceText   = document.getElementById("price");
-const summary     = document.getElementById("summary");
-const loading     = document.getElementById("loading");
-const toast       = document.getElementById("toast");
-
-const rankName = ["Sắt","Đồng","Bạc","Vàng","Bạch Kim","Kim Cương","Ascendant"];
-const pricePerRank = [20000,25000,35000,50000,70000,100000,150000];
-
-function calc(){
-  const c = +currentRank.value;
-  const t = +targetRank.value;
-  if(t<=c){
-    priceText.innerText="0 VNĐ";
-    summary.innerText="Vui lòng chọn rank hợp lệ";
-    return;
-  }
-  let total=0;
-  for(let i=c;i<t;i++) total+=pricePerRank[i];
-  priceText.innerText = total.toLocaleString("vi-VN")+" VNĐ";
-  summary.innerHTML = `Từ <b>${rankName[c]}</b> → <b>${rankName[t]}</b><br>
-  Tổng tiền: <b style="color:#00ff99">${total.toLocaleString("vi-VN")} VNĐ</b>`;
-}
-
-currentRank.onchange = calc;
-targetRank.onchange  = calc;
-
-document.getElementById("boostForm").onsubmit=e=>{
-  e.preventDefault();
-  loading.classList.add("active");
-  setTimeout(()=>{
-    loading.classList.remove("active");
-    toast.classList.add("show","success");
-    setTimeout(()=>toast.classList.remove("show"),3000);
-    e.target.reset();
-    priceText.innerText="0 VNĐ";
-    summary.innerText="Chưa có thông tin đơn hàng";
-  },1500);
-};
-</script>
 
 </body>
 </html>
